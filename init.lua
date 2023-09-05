@@ -17,6 +17,8 @@ require "config.options"
 require "config.remap"
 require("lazy").setup("plugins")
 
+vim.cmd('source /Users/petr/.config/nvim/addsubtract.vim')
+
 -- To install:
 --   :which python
 --   Use that venv's pip to install black-macchiato
