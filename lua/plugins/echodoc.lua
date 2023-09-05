@@ -1,0 +1,3 @@
+return {
+  'Shougo/echodoc.vim'
+}
