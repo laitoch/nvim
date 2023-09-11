@@ -16,10 +16,10 @@ cmp.setup.cmdline(':', {
   })
 })
 
-
-cmp.setup({
-  mapping = cmp.mapping.preset.insert({
-      ['<C-Space>'] = cmp.mapping.complete(),
-      ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-  })
-})
+--
+-- cmp.setup({
+--   mapping = cmp.mapping.preset.insert({
+--       ['<C-Space>'] = cmp.mapping.complete(),
+--       ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+--   })
+-- })
