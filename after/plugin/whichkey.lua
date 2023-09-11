@@ -13,6 +13,15 @@ local wk = require("which-key")
 --     desc = "Search on current file"
 -- })
 
+vim.keymap.set(
+  'n',
+  '_',
+  '<Plug>fanfingtastic_f_',
+  {
+    noremap = true,
+    desc = "Find next underscore",
+  }
+)
 
 
 wk.register({
