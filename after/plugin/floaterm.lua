@@ -4,7 +4,7 @@ vim.keymap.set(
   '<C-f>',
   function()
     vim.cmd(
-      'FloatermNew --width=0.9 --height=0.9 --opener=edit vifm "-c set vicmd=floterm" '
+      'FloatermNew --width=0.9 --height=0.9 --opener=edit vifm "-c set vicmd=floaterm" '
       .. vim.loop.cwd()
       .. ' '
       .. vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":p:h")
