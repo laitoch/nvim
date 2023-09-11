@@ -18,6 +18,7 @@ require "config.remap"
 require("lazy").setup("plugins")
 
 vim.cmd('source /Users/petr/.config/nvim/addsubtract.vim')
+vim.cmd('source /Users/petr/.config/nvim/makepython.vim')
 
 -- To install:
 --   :which python
