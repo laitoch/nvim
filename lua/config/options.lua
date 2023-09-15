@@ -29,13 +29,3 @@ vim.opt.winminwidth = 5
 vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 vim.opt.undofile = true
 vim.opt.undolevels = 10000
-
-vim.api.nvim_create_autocmd('Filetype', {
-  pattern = { 'csv' },
-  command = 'setlocal nowrap'
-})
-
-vim.api.nvim_create_autocmd('Filetype', {
-  pattern = { 'markdown' },
-  command = 'setlocal textwidth=80'
-})
