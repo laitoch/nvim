@@ -2,3 +2,4 @@ lazy-lock.json
 /spell/
 lua/.luarc.json
 *.foo
+/db_ui/
