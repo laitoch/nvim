@@ -34,3 +34,8 @@ vim.api.nvim_create_autocmd('Filetype', {
   pattern = { 'csv' },
   command = 'setlocal nowrap'
 })
+
+vim.api.nvim_create_autocmd('Filetype', {
+  pattern = { 'markdown' },
+  command = 'setlocal textwidth=80'
+})
