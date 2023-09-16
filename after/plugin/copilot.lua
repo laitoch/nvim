@@ -1,3 +1,4 @@
 vim.g.copilot_filetypes = {
-    markdown = true,
+  markdown = true,
+  gitcommit = true,
 }
