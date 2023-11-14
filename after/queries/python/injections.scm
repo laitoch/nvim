@@ -2,5 +2,5 @@
 
 ((
   (string_content) @sqlstring
-  (#match? @sqlstring "(SELECT|select|INSERT|insert|UPDATE|update|DELETE|delete).*")
+  (#match? @sqlstring "(SELECT|INSERT|UPDATE|DELETE).*")
 ) @injection.content (#set! injection.language "sql"))
