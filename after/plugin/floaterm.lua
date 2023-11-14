@@ -27,6 +27,19 @@ vim.keymap.set('n', '<C-t>', '<cmd>FloatermNew --wintype=vsplit --width=0.4<cr>'
 vim.keymap.set('n', '<leader>fi', '<cmd>FloatermNew --wintype=vsplit --width=0.4 pdm run ipython --no-autoindent<cr>')
 vim.keymap.set('v', '<C-s>', "<esc><cmd>\'<,\'>FloatermSend!<cr>")
 
+
+vim.keymap.set(
+  'n',
+  '<leader>fs',
+  function()
+    vim.cmd(
+      'FloatermNew --width=0.9 --height=0.9 --opener=edit csvlens '
+      .. vim.api.nvim_buf_get_name(0)
+    )
+  end,
+  { desc = 'Open cSvlens in floaterm' }
+)
+
 -- vim.keymap.set('t', '<C-space>', "<C-\\><C-n>")
 
 
