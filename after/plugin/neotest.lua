@@ -1,10 +1,23 @@
 require("neotest").setup({
 adapters = {
   require("neotest-python")({
-    args = {"-vv", "-o log_cli=true log_cli_level=DEBUG"},
+    args = {"-vv", "-o log_cli=true log_cli_level=DEBUG", "--run-tests-requiring-models"},
   })
 },
 })
+
+
+-- TODO make this set up the extra args for from some settable vim config variable
+-- vim.keymap.set(
+--   'n',
+--   '<leader>uR',
+--   function()
+--     require("neotest").run.run({extra_args = {
+--       "--run-tests-requiring-models",
+--     }})
+--   end,
+--   {noremap = true, desc = "Unit Test Run with extra args"}
+-- )
 
 
 vim.keymap.set('n', '<leader>us', require("neotest").summary.toggle, {noremap = true, desc = "Unit Test Summary"})
