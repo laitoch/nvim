@@ -43,5 +43,7 @@ vim.keymap.set('n', '<leader>fm', ":Telescope marks<CR>", { desc = 'Find Marks' 
 vim.keymap.set('n', '<leader>fl', ":Telescope current_buffer_fuzzy_find<CR>", { desc = 'Find Line in current buffer' })
 vim.keymap.set('n', '<leader>fr', ":Telescope oldfiles<CR>", { desc = 'Find Recently opened files' })
 vim.keymap.set('n', '<leader>fc', ":Telescope command_history<CR>", { desc = 'Find Command history' })
+vim.keymap.set('n', '<leader>fh', ":Telescope help_tags<CR>", { desc = 'Find Help tags' })
+vim.keymap.set('n', '<leader>fk', ":Telescope keymaps<CR>", { desc = 'Find Keymaps' })
 
 vim.keymap.set('n', '<leader>gc', ":Telescope git_commits<CR>", { desc = 'Git Commits (commit message filter) (Telescope)' })
