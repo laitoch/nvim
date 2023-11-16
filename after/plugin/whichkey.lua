@@ -18,6 +18,9 @@ wk.register({
   ["<leader>gd"] = { vim.lsp.buf.definition, "[G]o to [D]efinition (LSP)" },
   ["<leader>gr"] = { "<cmd>Telescope lsp_references<cr>", "[G]o to [R]eferences (LSP + Telescope)" },
   ["<leader>D"] = { "<cmd>Telescope lsp_type_definitions<cr>", "Type [D]efinition" },
+  ["K"] = { vim.lsp.buf.hover, "LSP Hover" },
+})
+
 -- Group Names
 wk.register({
   ["<leader>f"] = { name = "Find (Telescope)" },
@@ -25,7 +28,6 @@ wk.register({
 
 wk.register({
   ["<leader>j"] = { "<cmd>lua require('treesj').toggle()<cr>", "TreeSJ: Split-Join" },
-  ["K"] = { vim.lsp.buf.hover, "LSP Hover" },
   ["<leader>S"] = { "<cmd>lua require('spectre').toggle()<CR>", "Toggle Spectre" },
   ["<leader>l"] = {
     name = "+lsp",
