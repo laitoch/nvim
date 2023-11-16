@@ -29,8 +29,17 @@ wk.register({
   ["<leader>S"] = { "<cmd>lua require('spectre').toggle()<CR>", "Toggle Spectre" },
   ["<leader>l"] = {
     name = "+lsp",
-    f = { vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Fix All" end, apply=true}), "Ruff: Fix All" },
-    i = { vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Organize Imports" end, apply=true}), "Ruff: Organize Imports" },
+    f = {
+      function()
+        vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Fix All" end, apply=true})
+      end,
+      "Ruff: Fix All",
+    },
+    i = {
+      function()
+        vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Organize Imports" end, apply=true})
+      end,
+      "Ruff: Organize Imports",
 
   },
 })
