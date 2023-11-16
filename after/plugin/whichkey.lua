@@ -25,6 +25,10 @@ vim.keymap.set(
 
 
 wk.register({
+  ["<leader>ca"] = { vim.lsp.buf.code_action, "LSP [C]ode [A]ction" },
+})
+
+wk.register({
   ["<leader>f"] = {
     name = "Find (Telescope)",
   },
@@ -37,7 +41,6 @@ wk.register({
     n = { vim.lsp.buf.references, "LSP References" },
     t = { "<cmd>Telescope lsp_references<cr>", "LSP References (Telescope)" },
     r = { vim.lsp.buf.rename, "LSP Rename" },
-    a = { vim.lsp.buf.code_action, "LSP Code Action" },
     f = { vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Fix All" end, apply=true}), "Ruff: Fix All" },
     i = { vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Organize Imports" end, apply=true}), "Ruff: Organize Imports" },
 
@@ -70,7 +73,6 @@ wk.register({
       function() require('refactoring').refactor('Inline Variable') end,
       "Inline Variable",
     },
-    a = { vim.lsp.buf.code_action, "LSP Code Action" },
   },
 }, {mode = "x"})
 
