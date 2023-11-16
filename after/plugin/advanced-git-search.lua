@@ -36,9 +36,9 @@ vim.keymap.set(
 
 vim.keymap.set(
   'v',
-  '<C-B>',
+  '<C-H>',
   function()
     vim.cmd("'<,'>AdvancedGitSearch diff_commit_line")
   end,
-  { desc = 'Blame lines (Telescope)' }
+  { desc = 'History of lines (Telescope)' }
 )
