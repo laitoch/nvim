@@ -24,8 +24,13 @@ vim.keymap.set(
 )
 
 
+-- LSP
 wk.register({
-  ["<leader>ca"] = { vim.lsp.buf.code_action, "LSP [C]ode [A]ction" },
+  ["<leader>ca"] = { vim.lsp.buf.code_action, "[C]ode [A]ction (LSP)" },
+  ["<leader>rn"] = { vim.lsp.buf.rename, "[R]e[n]ame (LSP)" },
+  ["<leader>gd"] = { vim.lsp.buf.definition, "[G]o to [D]efinition (LSP)" },
+  ["<leader>gr"] = { "<cmd>Telescope lsp_references<cr>", "[G]o to [R]eferences (LSP + Telescope)" },
+  ["<leader>D"] = { "<cmd>Telescope lsp_type_definitions<cr>", "Type [D]efinition" },
 })
 
 wk.register({
@@ -37,15 +42,10 @@ wk.register({
   ["<leader>S"] = { "<cmd>lua require('spectre').toggle()<CR>", "Toggle Spectre" },
   ["<leader>l"] = {
     name = "+lsp",
-    d = { vim.lsp.buf.definition, "LSP Definition" },
-    n = { vim.lsp.buf.references, "LSP References" },
-    t = { "<cmd>Telescope lsp_references<cr>", "LSP References (Telescope)" },
-    r = { vim.lsp.buf.rename, "LSP Rename" },
     f = { vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Fix All" end, apply=true}), "Ruff: Fix All" },
     i = { vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Organize Imports" end, apply=true}), "Ruff: Organize Imports" },
 
   },
-  ["gd"] = { vim.lsp.buf.definition, "LSP Definition" },
 })
 
 wk.register({
