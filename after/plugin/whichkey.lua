@@ -75,7 +75,3 @@ wk.register({
     },
   },
 }, {mode = "x"})
-
-wk.register({
-  ["<C-k>"] = { vim.lsp.buf.signature_help, "Signature Help" },
-}, {mode = "i"})
