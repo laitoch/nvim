@@ -6,7 +6,7 @@ vim.keymap.set(
   '<Plug>fanfingtastic_f_',
   {
     noremap = true,
-    desc = "Find next underscore",
+    desc = "Find next underscore (When holding shift, _ goes forward, F_ goes backward)",
   }
 )
 
