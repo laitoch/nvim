@@ -14,7 +14,7 @@ vim.keymap.set(
 )
 vim.keymap.set(
   'n',
-  '<leader>fv',
+  '<leader>vd',
   function()
     vim.cmd(
       'FloatermNew --width=0.9 --height=0.9 --opener=edit vd '
@@ -24,13 +24,13 @@ vim.keymap.set(
   { desc = 'Open VisiData in floaterm' }
 )
 vim.keymap.set('n', '<C-t>', '<cmd>FloatermNew --wintype=vsplit --width=0.4<cr>')
-vim.keymap.set('n', '<leader>fi', '<cmd>FloatermNew --wintype=vsplit --width=0.4 pdm run ipython --no-autoindent<cr>')
+-- vim.keymap.set('n', '<leader>fi', '<cmd>FloatermNew --wintype=vsplit --width=0.4 pdm run ipython --no-autoindent<cr>')
 vim.keymap.set('v', '<C-s>', "<esc><cmd>\'<,\'>FloatermSend!<cr>")
 
 
 vim.keymap.set(
   'n',
-  '<leader>fs',
+  '<leader>csv',
   function()
     vim.cmd(
       'FloatermNew --width=0.9 --height=0.9 --opener=edit csvlens '
