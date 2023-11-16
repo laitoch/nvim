@@ -19,6 +19,19 @@ wk.register({
   ["<leader>gr"] = { "<cmd>Telescope lsp_references<cr>", "[G]o to [R]eferences (LSP + Telescope)" },
   ["<leader>D"] = { "<cmd>Telescope lsp_type_definitions<cr>", "Type [D]efinition" },
   ["K"] = { vim.lsp.buf.hover, "LSP Hover" },
+
+  ["<leader>fa"] = {
+    function()
+      vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Fix All" end, apply=true})
+    end,
+    "[F]ix [A]ll (Ruff)",
+  },
+  ["<leader>oi"] = {
+    function()
+      vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Organize Imports" end, apply=true})
+    end,
+    "[O]rganize [I]mports (Ruff)",
+  },
 })
 
 -- Group Names
@@ -29,21 +42,6 @@ wk.register({
 wk.register({
   ["<leader>j"] = { "<cmd>lua require('treesj').toggle()<cr>", "TreeSJ: Split-Join" },
   ["<leader>S"] = { "<cmd>lua require('spectre').toggle()<CR>", "Toggle Spectre" },
-  ["<leader>l"] = {
-    name = "+lsp",
-    f = {
-      function()
-        vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Fix All" end, apply=true})
-      end,
-      "Ruff: Fix All",
-    },
-    i = {
-      function()
-        vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Organize Imports" end, apply=true})
-      end,
-      "Ruff: Organize Imports",
-
-  },
 })
 
 wk.register({
