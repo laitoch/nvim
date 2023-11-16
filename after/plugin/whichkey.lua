@@ -26,9 +26,7 @@ vim.keymap.set(
 
 wk.register({
   ["<leader>f"] = {
-    name = "+file",
-    f = { "<cmd>Telescope find_files<cr>", "Find File" },
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+    name = "Find (Telescope)",
   },
   ["<leader>j"] = { "<cmd>lua require('treesj').toggle()<cr>", "TreeSJ: Split-Join" },
   ["K"] = { vim.lsp.buf.hover, "LSP Hover" },
