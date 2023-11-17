@@ -10,7 +10,6 @@ vim.keymap.set(
   }
 )
 
-
 -- LSP
 wk.register({
   ["<leader>ca"] = { vim.lsp.buf.code_action, "[C]ode [A]ction (LSP)" },
@@ -41,31 +40,3 @@ wk.register({
 wk.register({
   ["<leader>j"] = { "<cmd>lua require('treesj').toggle()<cr>", "TreeSJ: Split-Join" },
 })
-
-wk.register({
-  ["<leader>r"] = {
-    name = "+refactoring",
-    -- TODO: It would be nice to have the following features:
-    --  "Rename module + file/directory"
-    --  "Move class/function/variable to another file"
-    --  "Inline function"
-    --  Rope has some of them:
-    --  when pylsp with rope is available, we can via code actions:
-    --    rename modules (files and directories need to be renamed manually)
-    --    inline functions
-    --  Move module/global/method should be in ropevim only
-    --    MUST HAVE!
-    f = {
-      function() require('refactoring').refactor('Extract Function') end,
-      "Extract Function",
-    },
-    v = {
-      function() require('refactoring').refactor('Extract Variable') end,
-      "Extract Variable",
-    },
-    i = {
-      function() require('refactoring').refactor('Inline Variable') end,
-      "Inline Variable",
-    },
-  },
-}, {mode = "x"})
