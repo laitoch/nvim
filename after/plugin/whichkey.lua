@@ -36,7 +36,3 @@ wk.register({
 wk.register({
   ["<leader>f"] = { name = "Find (Telescope)" },
 })
-
-wk.register({
-  ["<leader>j"] = { "<cmd>lua require('treesj').toggle()<cr>", "TreeSJ: Split-Join" },
-})
