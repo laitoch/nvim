@@ -17,7 +17,6 @@ wk.register({
   ["<leader>rn"] = { vim.lsp.buf.rename, "[R]e[n]ame (LSP)" },
   ["<leader>gd"] = { vim.lsp.buf.definition, "[G]o to [D]efinition (LSP)" },
   ["<leader>gr"] = { "<cmd>Telescope lsp_references<cr>", "[G]o to [R]eferences (LSP + Telescope)" },
-  ["<leader>D"] = { "<cmd>Telescope lsp_type_definitions<cr>", "Type [D]efinition" },
   ["K"] = { vim.lsp.buf.hover, "LSP Hover" },
 
   ["<leader>fa"] = {
