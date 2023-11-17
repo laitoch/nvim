@@ -76,13 +76,13 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap(
   "n",
-  "<leader>gd",
+  "gd",
   "<cmd>lua vim.lsp.buf.definition()<cr>",
   { desc = "[G]o to [D]efinition (LSP)" }
 )
 vim.api.nvim_set_keymap(
   "n",
-  "<leader>gr",
+  "gr",
   "<cmd>Telescope lsp_references<cr>",
   { desc = "[G]o to [R]eferences (LSP + Telescope)" }
 )
