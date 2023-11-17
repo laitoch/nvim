@@ -62,26 +62,45 @@ require('lspconfig').lua_ls.setup({
   }
 })
 
--- LSP Keymaps
-local wk = require("which-key")
-wk.register({
-  ["<leader>ca"] = { vim.lsp.buf.code_action, "[C]ode [A]ction (LSP)" },
-  ["<leader>rn"] = { vim.lsp.buf.rename, "[R]e[n]ame (LSP)" },
-  ["<leader>gd"] = { vim.lsp.buf.definition, "[G]o to [D]efinition (LSP)" },
-  ["<leader>gr"] = { "<cmd>Telescope lsp_references<cr>", "[G]o to [R]eferences (LSP + Telescope)" },
-  ["K"] = { vim.lsp.buf.hover, "LSP Hover" },
-
-  ["<leader>fa"] = {
-    function()
-      vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Fix All" end, apply=true})
-    end,
-    "[F]ix [A]ll (Ruff)",
-  },
-  ["<leader>oi"] = {
-    function()
-      vim.lsp.buf.code_action({filter=function(arg) return arg.title == "Ruff: Organize Imports" end, apply=true})
-    end,
-    "[O]rganize [I]mports (Ruff)",
-  },
-})
-
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ca",
+  "<cmd>lua vim.lsp.buf.code_action()<cr>",
+  { desc = "[C]ode [A]ction (LSP)" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>rn",
+  "<cmd>lua vim.lsp.buf.rename()<cr>",
+  { desc = "[R]e[n]ame (LSP)" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>gd",
+  "<cmd>lua vim.lsp.buf.definition()<cr>",
+  { desc = "[G]o to [D]efinition (LSP)" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>gr",
+  "<cmd>Telescope lsp_references<cr>",
+  { desc = "[G]o to [R]eferences (LSP + Telescope)" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "K",
+  "<cmd>lua vim.lsp.buf.hover()<cr>",
+  { desc = "LSP Hover" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fa",
+  "<cmd>lua vim.lsp.buf.code_action({filter=function(arg) return arg.title == 'Ruff: Fix All' end, apply=true})<cr>",
+  { desc = "[F]ix [A]ll (Ruff)" }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>oi",
+  "<cmd>lua vim.lsp.buf.code_action({filter=function(arg) return arg.title == 'Ruff: Organize Imports' end, apply=true})<cr>",
+  { desc = "[O]rganize [I]mports (Ruff)" }
+)
