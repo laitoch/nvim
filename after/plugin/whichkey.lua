@@ -40,7 +40,6 @@ wk.register({
 
 wk.register({
   ["<leader>j"] = { "<cmd>lua require('treesj').toggle()<cr>", "TreeSJ: Split-Join" },
-  ["<leader>S"] = { "<cmd>lua require('spectre').toggle()<CR>", "Toggle Spectre" },
 })
 
 wk.register({
