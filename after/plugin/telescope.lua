@@ -9,14 +9,14 @@ vim.keymap.set(
 
 vim.keymap.set(
   'n',
-  '<leader>fF',
+  '<leader>fd',
   function()
     builtin.find_files{
       cwd = vim.fn.expand('%:p:h'),
       no_ignore = true,
     }
   end,
-  { desc = 'Find local Files in current directory' }
+  { desc = '[F]ind in current [D]irectory' }
 )
 
 vim.keymap.set(
