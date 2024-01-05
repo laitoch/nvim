@@ -1,10 +1,6 @@
 require("obsidian").setup({
   mappings = {},  -- Needed due to https://github.com/epwalsh/obsidian.nvim/issues/162
   dir = "~/vault",
-  completion = {
-    new_notes_location = "notes_subdir",
-    prepend_note_id = false,
-  },
   note_id_func = function(title)
     -- If title is given, use it to create a note ID.
     -- Otherwise, use timestamp + random suffix.
