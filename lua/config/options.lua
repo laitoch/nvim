@@ -26,6 +26,7 @@ vim.opt.timeoutlen = 300
 vim.opt.updatetime = 200
 vim.opt.wildmode = "longest:full,full"
 vim.opt.winminwidth = 5
+vim.opt.conceallevel = 2
 
 vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 vim.opt.undofile = true
