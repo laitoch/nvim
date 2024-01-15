@@ -6,6 +6,7 @@ Soft link the configs from this repository to the actual config files:
 ```
 ln -s ~/.config/nvim nvim
 ln -s ~/personal/repositories/nvim/lazygit/config.yml ~/Library/Application\ Support/lazygit/config.yml
+ln -s ~/personal/repositories/nvim/vifmrc ~/.vifm/vifmrc
 ```
 
 Packages managed by the OS package manager:
