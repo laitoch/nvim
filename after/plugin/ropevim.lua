@@ -1,0 +1,1 @@
+-- vim.g.ropevim_enable_shortcuts = 0
