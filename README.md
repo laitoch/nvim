@@ -34,3 +34,7 @@ Neovim Setup:
 :Copilot setup
 :TSInstall vimdoc lua python
 ```
+
+## Instructions
+
+ - [Refactoring](./docs/refactoring.md)
