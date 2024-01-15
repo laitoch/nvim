@@ -1,0 +1,11 @@
+os:
+  edit: 'floaterm {{filename}}'
+  editAtLine: 'floaterm {{filename}}'
+  editAtLineAndWait: 'floaterm {{filename}}'
+  editInTerminal: true
+  openDirInEditor: 'floaterm {{dir}}'
+
+git:
+  paging:
+    colorArg: never
+    pager: delta --dark --paging=never
