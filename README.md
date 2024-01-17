@@ -27,11 +27,12 @@ Python Setup:
 pyenv install {some recent version}
 pyenv global {same recent version}
 # Add pyenv to PATH and source
-pip install --upgrade pip
-pip install neovim
 
-pip install pynvim
-pip install ropevim
+~/.pyenv/shims/pip install --upgrade pip
+~/.pyenv/shims/pip install neovim
+
+~/.pyenv/shims/pip install pynvim
+~/.pyenv/shims/pip install ropevim
 ```
 
 Neovim Setup:

@@ -17,6 +17,8 @@ require "config.options"
 require "config.remap"
 require("lazy").setup("plugins")
 
+vim.cmd('let g:python3_host_prog = "~/.pyenv/shims/python"')
+
 vim.cmd('source ~/.config/nvim/addsubtract.vim')
 vim.cmd('source ~/.config/nvim/makepython.vim')
 
