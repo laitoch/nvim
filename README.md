@@ -42,6 +42,11 @@ Neovim Setup:
 :TSInstall vimdoc lua python
 ```
 
+Secrets Setup:
+```
+echo "YOUR_OPENAI_API_KEY" > ~/.config/openai.token  # For vim-ai
+```
+
 ## Instructions
 
  - [Refactoring](./docs/refactoring.md)
