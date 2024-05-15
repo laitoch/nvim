@@ -40,6 +40,14 @@ require('lspconfig').pyright.setup {
 }
 -- require('lspconfig').pyre.setup {}
 require('lspconfig').ruff_lsp.setup({})
+--   init_options = {
+--     settings = {
+--       args = {
+--         "--preview",
+--       }
+--     }
+--   },
+-- })
 
 -- https://vi.stackexchange.com/a/39800
 -- Use internal formatting for bindings like gq. 
