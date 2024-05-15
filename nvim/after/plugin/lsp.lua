@@ -30,9 +30,9 @@ require('lspconfig').pylsp.setup {
 require('lspconfig').pyright.setup {
   on_new_config = function(config, root_dir)
     local env = vim.trim(vim.fn.system('cd "' .. root_dir .. '"; pdm run which python'))
-    if string.len(env) == 0 or env[0] ~= "/" then
-      env = vim.trim(vim.fn.system('cd "' .. root_dir .. '"; poetry run which python'))
-    end
+    -- if (string.len(env) == 0) then
+    -- env = vim.trim(vim.fn.system('cd "' .. root_dir .. '"; poetry run which python'))
+    -- end
     if string.len(env) > 0 then
       config.settings.python.pythonPath = env
     end
