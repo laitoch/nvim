@@ -26,4 +26,7 @@ telescope.setup {
 
 require("trouble").setup({
   height = 25,
+  severity = {
+    min = vim.diagnostic.severity.WARN
+  },
 })

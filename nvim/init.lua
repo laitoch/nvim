@@ -22,6 +22,20 @@ vim.cmd('let g:python3_host_prog = "~/.pyenv/shims/python"')
 vim.cmd('source ~/.config/nvim/addsubtract.vim')
 vim.cmd('source ~/.config/nvim/makepython.vim')
 
+vim.diagnostic.config({
+  virtual_text = {
+    severity = { min = vim.diagnostic.severity.WARN }
+  },
+  signs = {
+    severity = { min = vim.diagnostic.severity.WARN }
+  },
+  underline = {
+    severity = { min = vim.diagnostic.severity.WARN }
+  },
+  update_in_insert = false,
+  severity_sort = true,
+})
+
 -- To install:
 --   :which python
 --   Use that venv's pip to install black-macchiato
