@@ -25,18 +25,18 @@ require('gitsigns').setup {
       end, {expr=true})
 
       -- Actions
-      map('n', '<C-h><C-s>', gs.stage_hunk)
-      map('n', '<C-h><C-r>', gs.reset_hunk)
-      map('v', '<C-h><C-s>', function() gs.stage_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
-      map('v', '<C-h><C-r>', function() gs.reset_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
-      map('n', ',hS', gs.stage_buffer)
-      map('n', '<C-h><C-u>', gs.undo_stage_hunk)
-      map('n', ',hR', gs.reset_buffer)
-      map('n', ',hp', gs.preview_hunk)
-      -- map('n', ',hb', function() gs.blame_line{full=true} end)
-      map('n', ',hb', gs.toggle_current_line_blame)
-      map('n', ',hd', gs.diffthis)
-      map('n', ',hD', function() gs.diffthis('~') end)
+      map('n', '<leader>hs', gs.stage_hunk)
+      map('n', '<leader>hr', gs.reset_hunk)
+      map('v', '<leader>hs', function() gs.stage_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
+      map('v', '<leader>hr', function() gs.reset_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
+      map('n', '<leader>hS', gs.stage_buffer)
+      map('n', '<leader>hu', gs.undo_stage_hunk)
+      map('n', '<leader>hR', gs.reset_buffer)
+      map('n', '<leader>hp', gs.preview_hunk)
+      map('n', '<leader>hb', function() gs.blame_line{full=true} end)
+      map('n', '<leader>hb', gs.toggle_current_line_blame)
+      map('n', '<leader>hd', gs.diffthis)
+      map('n', '<leader>hD', function() gs.diffthis('~') end)
       -- map('n', ',td', gs.toggle_deleted) -- TODO whats this?
 
       -- Text object
