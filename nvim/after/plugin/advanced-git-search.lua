@@ -27,7 +27,7 @@ vim.keymap.set(
 
 vim.keymap.set(
   'n',
-  '<leader>gb',
+  '<leader>gm',
   function()
     vim.cmd('Telescope advanced_git_search changed_on_branch')
   end,
@@ -36,9 +36,9 @@ vim.keymap.set(
 
 vim.keymap.set(
   'v',
-  '<C-H>',
+  '<leader>gb',
   function()
     vim.cmd("'<,'>AdvancedGitSearch diff_commit_line")
   end,
-  { desc = 'History of lines (Telescope)' }
+  { desc = 'Git Blame: History of lines (Telescope)' }
 )
