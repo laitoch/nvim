@@ -51,3 +51,9 @@ echo "YOUR_OPENAI_API_KEY" > ~/.config/openai.token  # For vim-ai
 ## Instructions
 
  - [Refactoring](./docs/refactoring.md)
+
+## Unrelated cool stuff
+
+I like Tabby as a terminal. However, I hate the tab drag and drop feature lack.
+
+Starship is a super cool shell prompt.
